@@ -24,7 +24,7 @@ const store = createStore(combineAllReducers, applyMiddleware(thunk))
 
 const root = (
         <Provider store={store} >
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <App />
             </BrowserRouter>
         </Provider>

@@ -7,7 +7,9 @@ import PropTypes from 'prop-types'
 const productCard = props => (
   <Card>
     <Card.Content>
-      <Image src={props.product.path} />
+      <Link to={`/produit/${props.product.id}`}>
+        <Image src={props.product.path} />
+      </Link>
       <Card.Content>
         <Card.Header>
           <Link to={`/produit/${props.product.id}`}>
